@@ -768,7 +768,7 @@ PHP_MINIT_FUNCTION(redis)
     REGISTER_INI_ENTRIES();
 
     /* Redis class */
-    INIT_CLASS_ENTRY(redis_class_entry, "Redis", redis_functions);
+    INIT_CLASS_ENTRY(redis_class_entry, "AwesomeRedis", redis_functions);
     redis_ce = zend_register_internal_class(&redis_class_entry);
     redis_ce->create_object = create_redis_object;
 
