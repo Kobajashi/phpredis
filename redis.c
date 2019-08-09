@@ -238,242 +238,242 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_kscan, 0, 0, 2)
 ZEND_END_ARG_INFO()
 
 static zend_function_entry redis_functions[] = {
-     PHP_ME(Redis, __construct, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, __destruct, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, _prefix, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, _serialize, arginfo_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, _unserialize, arginfo_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, append, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, auth, arginfo_auth, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, bgSave, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, bgrewriteaof, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, bitcount, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, bitop, arginfo_bitop, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, bitpos, arginfo_bitpos, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, blPop, arginfo_blrpop, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, brPop, arginfo_blrpop, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, brpoplpush, arginfo_brpoplpush, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, bzPopMax, arginfo_blrpop, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, bzPopMin, arginfo_blrpop, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, clearLastError, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, client, arginfo_client, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, close, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, command, arginfo_command, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, config, arginfo_config, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, connect, arginfo_connect, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, dbSize, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, debug, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, decr, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, decrBy, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, del, arginfo_del, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, discard, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, dump, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, echo, arginfo_echo, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, eval, arginfo_eval, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, evalsha, arginfo_evalsha, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, exec, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, exists, arginfo_exists, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, expire, arginfo_expire, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, expireAt, arginfo_key_timestamp, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, flushAll, arginfo_flush, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, flushDB, arginfo_flush, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, geoadd, arginfo_geoadd, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, geodist, arginfo_geodist, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, geohash, arginfo_key_members, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, geopos, arginfo_key_members, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, georadius, arginfo_georadius, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, georadius_ro, arginfo_georadius, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, georadiusbymember, arginfo_georadiusbymember, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, georadiusbymember_ro, arginfo_georadiusbymember, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, get, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getAuth, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getBit, arginfo_key_offset, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getDBNum, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getHost, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getLastError, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getMode, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getOption, arginfo_getoption, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getPersistentID, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getPort, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getRange, arginfo_key_start_end, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getReadTimeout, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getSet, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, getTimeout, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hDel, arginfo_key_members, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hExists, arginfo_key_member, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hGet, arginfo_key_member, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hGetAll, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hIncrBy, arginfo_key_member_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hIncrByFloat, arginfo_key_member_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hKeys, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hLen, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hMget, arginfo_hmget, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hMset, arginfo_hmset, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hSet, arginfo_key_member_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hSetNx, arginfo_key_member_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hStrLen, arginfo_key_member, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hVals, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, hscan, arginfo_kscan, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, incr, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, incrBy, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, incrByFloat, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, info, arginfo_info, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, isConnected, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, keys, arginfo_keys, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lInsert, arginfo_linsert, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lLen, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lPop, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lPush, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lPushx, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lSet, arginfo_lset, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lastSave, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lindex, arginfo_lindex, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lrange, arginfo_key_start_end, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, lrem, arginfo_lrem, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, ltrim, arginfo_ltrim, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, mget, arginfo_mget, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, migrate, arginfo_migrate, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, move, arginfo_move, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, mset, arginfo_pairs, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, msetnx, arginfo_pairs, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, multi, arginfo_multi, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, object, arginfo_object, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, pconnect, arginfo_pconnect, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, persist, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, pexpire, arginfo_key_timestamp, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, pexpireAt, arginfo_key_timestamp, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, pfadd, arginfo_pfadd, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, pfcount, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, pfmerge, arginfo_pfmerge, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, ping, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, pipeline, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, psetex, arginfo_key_expire_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, psubscribe, arginfo_psubscribe, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, pttl, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, publish, arginfo_publish, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, pubsub, arginfo_pubsub, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, punsubscribe, arginfo_punsubscribe, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, rPop, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, rPush, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, rPushx, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, randomKey, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, rawcommand, arginfo_rawcommand, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, rename, arginfo_key_newkey, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, renameNx, arginfo_key_newkey, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, restore, arginfo_restore, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, role, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, rpoplpush, arginfo_rpoplpush, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sAdd, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sAddArray, arginfo_sadd_array, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sDiff, arginfo_nkeys, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sDiffStore, arginfo_dst_nkeys, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sInter, arginfo_nkeys, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sInterStore, arginfo_dst_nkeys, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sMembers, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sMove, arginfo_smove, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sPop, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sRandMember, arginfo_srand_member, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sUnion, arginfo_nkeys, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sUnionStore, arginfo_dst_nkeys, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, save, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, scan, arginfo_scan, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, scard, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, script, arginfo_script, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, select, arginfo_select, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, set, arginfo_set, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, setBit, arginfo_key_offset_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, setOption, arginfo_setoption, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, setRange, arginfo_key_offset_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, setex, arginfo_key_expire_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, setnx, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sismember, arginfo_key_value, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, slaveof, arginfo_slaveof, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, slowlog, arginfo_slowlog, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sort, arginfo_sort, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sortAsc, arginfo_generic_sort, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_ME(Redis, sortAscAlpha, arginfo_generic_sort, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_ME(Redis, sortDesc, arginfo_generic_sort, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_ME(Redis, sortDescAlpha, arginfo_generic_sort, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_ME(Redis, srem, arginfo_key_members, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, sscan, arginfo_kscan, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, strlen, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, subscribe, arginfo_subscribe, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, swapdb, arginfo_swapdb, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, time, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, ttl, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, type, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, unlink, arginfo_nkeys, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, unsubscribe, arginfo_unsubscribe, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, unwatch, arginfo_void, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, wait, arginfo_wait, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, watch, arginfo_watch, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xack, arginfo_xack, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xadd, arginfo_xadd, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xclaim, arginfo_xclaim, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xdel, arginfo_xdel, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xgroup, arginfo_xgroup, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xinfo, arginfo_xinfo, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xlen, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xpending, arginfo_xpending, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xrange, arginfo_xrange, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xread, arginfo_xread, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xreadgroup, arginfo_xreadgroup, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xrevrange, arginfo_xrange, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, xtrim, arginfo_xtrim, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zAdd, arginfo_zadd, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zCard, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zCount, arginfo_key_min_max, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zIncrBy, arginfo_zincrby, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zLexCount, arginfo_key_min_max, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zPopMax, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zPopMin, arginfo_key, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRange, arginfo_zrange, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRangeByLex, arginfo_zrangebylex, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRangeByScore, arginfo_zrangebyscore, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRank, arginfo_key_member, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRem, arginfo_key_members, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRemRangeByLex, arginfo_key_min_max, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRemRangeByRank, arginfo_key_start_end, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRemRangeByScore, arginfo_key_min_max, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRevRange, arginfo_zrange, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRevRangeByLex, arginfo_zrangebylex, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRevRangeByScore, arginfo_zrangebyscore, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zRevRank, arginfo_key_member, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zScore, arginfo_key_member, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zinterstore, arginfo_zstore, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zscan, arginfo_kscan, ZEND_ACC_PUBLIC)
-     PHP_ME(Redis, zunionstore, arginfo_zstore, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, __construct, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, __destruct, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, _prefix, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, _serialize, arginfo_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, _unserialize, arginfo_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, append, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, auth, arginfo_auth, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, bgSave, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, bgrewriteaof, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, bitcount, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, bitop, arginfo_bitop, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, bitpos, arginfo_bitpos, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, blPop, arginfo_blrpop, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, brPop, arginfo_blrpop, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, brpoplpush, arginfo_brpoplpush, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, bzPopMax, arginfo_blrpop, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, bzPopMin, arginfo_blrpop, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, clearLastError, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, client, arginfo_client, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, close, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, command, arginfo_command, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, config, arginfo_config, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, connect, arginfo_connect, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, dbSize, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, debug, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, decr, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, decrBy, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, del, arginfo_del, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, discard, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, dump, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, echo, arginfo_echo, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, eval, arginfo_eval, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, evalsha, arginfo_evalsha, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, exec, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, exists, arginfo_exists, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, expire, arginfo_expire, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, expireAt, arginfo_key_timestamp, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, flushAll, arginfo_flush, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, flushDB, arginfo_flush, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, geoadd, arginfo_geoadd, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, geodist, arginfo_geodist, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, geohash, arginfo_key_members, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, geopos, arginfo_key_members, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, georadius, arginfo_georadius, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, georadius_ro, arginfo_georadius, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, georadiusbymember, arginfo_georadiusbymember, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, georadiusbymember_ro, arginfo_georadiusbymember, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, get, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getAuth, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getBit, arginfo_key_offset, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getDBNum, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getHost, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getLastError, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getMode, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getOption, arginfo_getoption, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getPersistentID, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getPort, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getRange, arginfo_key_start_end, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getReadTimeout, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getSet, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, getTimeout, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hDel, arginfo_key_members, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hExists, arginfo_key_member, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hGet, arginfo_key_member, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hGetAll, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hIncrBy, arginfo_key_member_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hIncrByFloat, arginfo_key_member_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hKeys, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hLen, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hMget, arginfo_hmget, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hMset, arginfo_hmset, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hSet, arginfo_key_member_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hSetNx, arginfo_key_member_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hStrLen, arginfo_key_member, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hVals, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, hscan, arginfo_kscan, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, incr, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, incrBy, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, incrByFloat, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, info, arginfo_info, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, isConnected, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, keys, arginfo_keys, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lInsert, arginfo_linsert, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lLen, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lPop, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lPush, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lPushx, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lSet, arginfo_lset, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lastSave, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lindex, arginfo_lindex, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lrange, arginfo_key_start_end, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, lrem, arginfo_lrem, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, ltrim, arginfo_ltrim, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, mget, arginfo_mget, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, migrate, arginfo_migrate, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, move, arginfo_move, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, mset, arginfo_pairs, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, msetnx, arginfo_pairs, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, multi, arginfo_multi, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, object, arginfo_object, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, pconnect, arginfo_pconnect, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, persist, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, pexpire, arginfo_key_timestamp, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, pexpireAt, arginfo_key_timestamp, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, pfadd, arginfo_pfadd, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, pfcount, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, pfmerge, arginfo_pfmerge, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, ping, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, pipeline, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, psetex, arginfo_key_expire_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, psubscribe, arginfo_psubscribe, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, pttl, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, publish, arginfo_publish, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, pubsub, arginfo_pubsub, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, punsubscribe, arginfo_punsubscribe, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, rPop, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, rPush, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, rPushx, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, randomKey, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, rawcommand, arginfo_rawcommand, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, rename, arginfo_key_newkey, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, renameNx, arginfo_key_newkey, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, restore, arginfo_restore, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, role, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, rpoplpush, arginfo_rpoplpush, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sAdd, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sAddArray, arginfo_sadd_array, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sDiff, arginfo_nkeys, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sDiffStore, arginfo_dst_nkeys, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sInter, arginfo_nkeys, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sInterStore, arginfo_dst_nkeys, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sMembers, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sMove, arginfo_smove, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sPop, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sRandMember, arginfo_srand_member, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sUnion, arginfo_nkeys, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sUnionStore, arginfo_dst_nkeys, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, save, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, scan, arginfo_scan, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, scard, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, script, arginfo_script, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, select, arginfo_select, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, set, arginfo_set, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, setBit, arginfo_key_offset_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, setOption, arginfo_setoption, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, setRange, arginfo_key_offset_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, setex, arginfo_key_expire_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, setnx, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sismember, arginfo_key_value, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, slaveof, arginfo_slaveof, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, slowlog, arginfo_slowlog, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sort, arginfo_sort, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sortAsc, arginfo_generic_sort, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_ME(AwesomeRedis, sortAscAlpha, arginfo_generic_sort, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_ME(AwesomeRedis, sortDesc, arginfo_generic_sort, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_ME(AwesomeRedis, sortDescAlpha, arginfo_generic_sort, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_ME(AwesomeRedis, srem, arginfo_key_members, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, sscan, arginfo_kscan, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, strlen, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, subscribe, arginfo_subscribe, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, swapdb, arginfo_swapdb, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, time, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, ttl, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, type, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, unlink, arginfo_nkeys, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, unsubscribe, arginfo_unsubscribe, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, unwatch, arginfo_void, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, wait, arginfo_wait, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, watch, arginfo_watch, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xack, arginfo_xack, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xadd, arginfo_xadd, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xclaim, arginfo_xclaim, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xdel, arginfo_xdel, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xgroup, arginfo_xgroup, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xinfo, arginfo_xinfo, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xlen, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xpending, arginfo_xpending, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xrange, arginfo_xrange, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xread, arginfo_xread, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xreadgroup, arginfo_xreadgroup, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xrevrange, arginfo_xrange, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, xtrim, arginfo_xtrim, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zAdd, arginfo_zadd, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zCard, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zCount, arginfo_key_min_max, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zIncrBy, arginfo_zincrby, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zLexCount, arginfo_key_min_max, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zPopMax, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zPopMin, arginfo_key, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRange, arginfo_zrange, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRangeByLex, arginfo_zrangebylex, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRangeByScore, arginfo_zrangebyscore, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRank, arginfo_key_member, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRem, arginfo_key_members, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRemRangeByLex, arginfo_key_min_max, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRemRangeByRank, arginfo_key_start_end, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRemRangeByScore, arginfo_key_min_max, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRevRange, arginfo_zrange, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRevRangeByLex, arginfo_zrangebylex, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRevRangeByScore, arginfo_zrangebyscore, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zRevRank, arginfo_key_member, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zScore, arginfo_key_member, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zinterstore, arginfo_zstore, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zscan, arginfo_kscan, ZEND_ACC_PUBLIC)
+     PHP_ME(AwesomeRedis, zunionstore, arginfo_zstore, ZEND_ACC_PUBLIC)
 
      /* Mark all of these aliases deprecated.  They aren't actual Redis commands. */
-     PHP_MALIAS(Redis, delete, del, arginfo_del, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, evaluate, eval, arginfo_eval, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, evaluateSha, evalsha, arginfo_evalsha, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, getKeys, keys, arginfo_keys, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, getMultiple, mget, arginfo_mget, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, lGet, lindex, arginfo_lindex, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, lGetRange, lrange, arginfo_key_start_end, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, lRemove, lrem, arginfo_lrem, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, lSize, lLen, arginfo_key, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, listTrim, ltrim, arginfo_ltrim, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, open, connect, arginfo_connect, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, popen, pconnect, arginfo_pconnect, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, renameKey, rename, arginfo_key_newkey, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, sContains, sismember, arginfo_key_value, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, sGetMembers, sMembers, arginfo_key, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, sRemove, srem, arginfo_key_members, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, sSize, scard, arginfo_key, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, sendEcho, echo, arginfo_echo, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, setTimeout, expire, arginfo_expire, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, substr, getRange, arginfo_key_start_end, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, zDelete, zRem, arginfo_key_members, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, zDeleteRangeByRank, zRemRangeByRank, arginfo_key_min_max, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, zDeleteRangeByScore, zRemRangeByScore, arginfo_key_min_max, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, zInter, zinterstore, arginfo_zstore, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, zRemove, zRem, arginfo_key_members, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, zRemoveRangeByScore, zRemRangeByScore, arginfo_key_min_max, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, zReverseRange, zRevRange, arginfo_zrange, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, zSize, zCard, arginfo_key, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
-     PHP_MALIAS(Redis, zUnion, zunionstore, arginfo_zstore, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, delete, del, arginfo_del, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, evaluate, eval, arginfo_eval, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, evaluateSha, evalsha, arginfo_evalsha, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, getKeys, keys, arginfo_keys, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, getMultiple, mget, arginfo_mget, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, lGet, lindex, arginfo_lindex, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, lGetRange, lrange, arginfo_key_start_end, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, lRemove, lrem, arginfo_lrem, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, lSize, lLen, arginfo_key, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, listTrim, ltrim, arginfo_ltrim, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, open, connect, arginfo_connect, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, popen, pconnect, arginfo_pconnect, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, renameKey, rename, arginfo_key_newkey, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, sContains, sismember, arginfo_key_value, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, sGetMembers, sMembers, arginfo_key, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, sRemove, srem, arginfo_key_members, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, sSize, scard, arginfo_key, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, sendEcho, echo, arginfo_echo, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, setTimeout, expire, arginfo_expire, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, substr, getRange, arginfo_key_start_end, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, zDelete, zRem, arginfo_key_members, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, zDeleteRangeByRank, zRemRangeByRank, arginfo_key_min_max, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, zDeleteRangeByScore, zRemRangeByScore, arginfo_key_min_max, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, zInter, zinterstore, arginfo_zstore, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, zRemove, zRem, arginfo_key_members, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, zRemoveRangeByScore, zRemRangeByScore, arginfo_key_min_max, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, zReverseRange, zRevRange, arginfo_zrange, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, zSize, zCard, arginfo_key, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
+     PHP_MALIAS(AwesomeRedis, zUnion, zunionstore, arginfo_zstore, ZEND_ACC_PUBLIC | ZEND_ACC_DEPRECATED)
      PHP_FE_END
 };
 
@@ -895,9 +895,9 @@ PHP_MINFO_FUNCTION(redis)
     DISPLAY_INI_ENTRIES();
 }
 
-/* {{{ proto Redis Redis::__construct()
+/* {{{ proto Redis AwesomeRedis::__construct()
     Public constructor */
-PHP_METHOD(Redis, __construct)
+PHP_METHOD(AwesomeRedis, __construct)
 {
     if (zend_parse_parameters(ZEND_NUM_ARGS(), "") == FAILURE) {
         RETURN_FALSE;
@@ -905,10 +905,10 @@ PHP_METHOD(Redis, __construct)
 }
 /* }}} */
 
-/* {{{ proto Redis Redis::__destruct()
+/* {{{ proto Redis AwesomeRedis::__destruct()
     Public Destructor
  */
-PHP_METHOD(Redis,__destruct) {
+PHP_METHOD(AwesomeRedis,__destruct) {
     if(zend_parse_parameters(ZEND_NUM_ARGS(), "") == FAILURE) {
         RETURN_FALSE;
     }
@@ -930,9 +930,9 @@ PHP_METHOD(Redis,__destruct) {
     }
 }
 
-/* {{{ proto boolean Redis::connect(string host, int port [, double timeout [, long retry_interval]])
+/* {{{ proto boolean AwesomeRedis::connect(string host, int port [, double timeout [, long retry_interval]])
  */
-PHP_METHOD(Redis, connect)
+PHP_METHOD(AwesomeRedis, connect)
 {
     if (redis_connect(INTERNAL_FUNCTION_PARAM_PASSTHRU, 0) == FAILURE) {
         RETURN_FALSE;
@@ -942,9 +942,9 @@ PHP_METHOD(Redis, connect)
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::pconnect(string host, int port [, double timeout])
+/* {{{ proto boolean AwesomeRedis::pconnect(string host, int port [, double timeout])
  */
-PHP_METHOD(Redis, pconnect)
+PHP_METHOD(AwesomeRedis, pconnect)
 {
     if (redis_connect(INTERNAL_FUNCTION_PARAM_PASSTHRU, 1) == FAILURE) {
         RETURN_FALSE;
@@ -1026,31 +1026,31 @@ redis_connect(INTERNAL_FUNCTION_PARAMETERS, int persistent)
     return SUCCESS;
 }
 
-/* {{{ proto long Redis::bitop(string op, string key, ...) */
-PHP_METHOD(Redis, bitop)
+/* {{{ proto long AwesomeRedis::bitop(string op, string key, ...) */
+PHP_METHOD(AwesomeRedis, bitop)
 {
     REDIS_PROCESS_CMD(bitop, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::bitcount(string key, [int start], [int end])
+/* {{{ proto long AwesomeRedis::bitcount(string key, [int start], [int end])
  */
-PHP_METHOD(Redis, bitcount)
+PHP_METHOD(AwesomeRedis, bitcount)
 {
     REDIS_PROCESS_CMD(bitcount, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto integer Redis::bitpos(string key, int bit, [int start, int end]) */
-PHP_METHOD(Redis, bitpos)
+/* {{{ proto integer AwesomeRedis::bitpos(string key, int bit, [int start, int end]) */
+PHP_METHOD(AwesomeRedis, bitpos)
 {
     REDIS_PROCESS_CMD(bitpos, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::close()
+/* {{{ proto boolean AwesomeRedis::close()
  */
-PHP_METHOD(Redis, close)
+PHP_METHOD(AwesomeRedis, close)
 {
     RedisSock *redis_sock = redis_sock_get_connected(INTERNAL_FUNCTION_PARAM_PASSTHRU);
 
@@ -1061,70 +1061,70 @@ PHP_METHOD(Redis, close)
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::set(string key, mixed val, long timeout,
+/* {{{ proto boolean AwesomeRedis::set(string key, mixed val, long timeout,
  *                              [array opt) */
-PHP_METHOD(Redis, set) {
+PHP_METHOD(AwesomeRedis, set) {
     REDIS_PROCESS_CMD(set, redis_boolean_response);
 }
 
-/* {{{ proto boolean Redis::setex(string key, long expire, string value)
+/* {{{ proto boolean AwesomeRedis::setex(string key, long expire, string value)
  */
-PHP_METHOD(Redis, setex)
+PHP_METHOD(AwesomeRedis, setex)
 {
     REDIS_PROCESS_KW_CMD("SETEX", redis_key_long_val_cmd, redis_boolean_response);
 }
 
-/* {{{ proto boolean Redis::psetex(string key, long expire, string value)
+/* {{{ proto boolean AwesomeRedis::psetex(string key, long expire, string value)
  */
-PHP_METHOD(Redis, psetex)
+PHP_METHOD(AwesomeRedis, psetex)
 {
     REDIS_PROCESS_KW_CMD("PSETEX", redis_key_long_val_cmd, redis_boolean_response);
 }
 
-/* {{{ proto boolean Redis::setnx(string key, string value)
+/* {{{ proto boolean AwesomeRedis::setnx(string key, string value)
  */
-PHP_METHOD(Redis, setnx)
+PHP_METHOD(AwesomeRedis, setnx)
 {
     REDIS_PROCESS_KW_CMD("SETNX", redis_kv_cmd, redis_1_response);
 }
 
 /* }}} */
 
-/* {{{ proto string Redis::getSet(string key, string value)
+/* {{{ proto string AwesomeRedis::getSet(string key, string value)
  */
-PHP_METHOD(Redis, getSet)
+PHP_METHOD(AwesomeRedis, getSet)
 {
     REDIS_PROCESS_KW_CMD("GETSET", redis_kv_cmd, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::randomKey()
+/* {{{ proto string AwesomeRedis::randomKey()
  */
-PHP_METHOD(Redis, randomKey)
+PHP_METHOD(AwesomeRedis, randomKey)
 {
     REDIS_PROCESS_KW_CMD("RANDOMKEY", redis_empty_cmd, redis_ping_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::echo(string msg)
+/* {{{ proto string AwesomeRedis::echo(string msg)
  */
-PHP_METHOD(Redis, echo)
+PHP_METHOD(AwesomeRedis, echo)
 {
     REDIS_PROCESS_KW_CMD("ECHO", redis_str_cmd, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::rename(string key_src, string key_dst)
+/* {{{ proto string AwesomeRedis::rename(string key_src, string key_dst)
  */
-PHP_METHOD(Redis, rename)
+PHP_METHOD(AwesomeRedis, rename)
 {
     REDIS_PROCESS_KW_CMD("RENAME", redis_key_key_cmd, redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::renameNx(string key_src, string key_dst)
+/* {{{ proto string AwesomeRedis::renameNx(string key_src, string key_dst)
  */
-PHP_METHOD(Redis, renameNx)
+PHP_METHOD(AwesomeRedis, renameNx)
 {
     REDIS_PROCESS_KW_CMD("RENAMENX", redis_key_key_cmd, redis_1_response);
 }
@@ -1132,62 +1132,62 @@ PHP_METHOD(Redis, renameNx)
 
 /* }}} */
 
-/* {{{ proto string Redis::get(string key)
+/* {{{ proto string AwesomeRedis::get(string key)
  */
-PHP_METHOD(Redis, get)
+PHP_METHOD(AwesomeRedis, get)
 {
     REDIS_PROCESS_KW_CMD("GET", redis_key_cmd, redis_string_response);
 }
 /* }}} */
 
 
-/* {{{ proto string Redis::ping()
+/* {{{ proto string AwesomeRedis::ping()
  */
-PHP_METHOD(Redis, ping)
+PHP_METHOD(AwesomeRedis, ping)
 {
     REDIS_PROCESS_KW_CMD("PING", redis_opt_str_cmd, redis_read_variant_reply);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::incr(string key [,int value])
+/* {{{ proto boolean AwesomeRedis::incr(string key [,int value])
  */
-PHP_METHOD(Redis, incr){
+PHP_METHOD(AwesomeRedis, incr){
     REDIS_PROCESS_CMD(incr, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::incrBy(string key ,int value)
+/* {{{ proto boolean AwesomeRedis::incrBy(string key ,int value)
  */
-PHP_METHOD(Redis, incrBy){
+PHP_METHOD(AwesomeRedis, incrBy){
     REDIS_PROCESS_KW_CMD("INCRBY", redis_key_long_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto float Redis::incrByFloat(string key, float value)
+/* {{{ proto float AwesomeRedis::incrByFloat(string key, float value)
  */
-PHP_METHOD(Redis, incrByFloat) {
+PHP_METHOD(AwesomeRedis, incrByFloat) {
     REDIS_PROCESS_KW_CMD("INCRBYFLOAT", redis_key_dbl_cmd,
         redis_bulk_double_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::decr(string key) */
-PHP_METHOD(Redis, decr)
+/* {{{ proto boolean AwesomeRedis::decr(string key) */
+PHP_METHOD(AwesomeRedis, decr)
 {
     REDIS_PROCESS_CMD(decr, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::decrBy(string key ,int value)
+/* {{{ proto boolean AwesomeRedis::decrBy(string key ,int value)
  */
-PHP_METHOD(Redis, decrBy){
+PHP_METHOD(AwesomeRedis, decrBy){
     REDIS_PROCESS_KW_CMD("DECRBY", redis_key_long_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::mget(array keys)
+/* {{{ proto array AwesomeRedis::mget(array keys)
  */
-PHP_METHOD(Redis, mget)
+PHP_METHOD(AwesomeRedis, mget)
 {
     zval *object, *z_args, *z_ele;
     HashTable *hash;
@@ -1235,25 +1235,25 @@ PHP_METHOD(Redis, mget)
     REDIS_PROCESS_RESPONSE(redis_sock_read_multibulk_reply);
 }
 
-/* {{{ proto boolean Redis::exists(string key)
+/* {{{ proto boolean AwesomeRedis::exists(string key)
  */
-PHP_METHOD(Redis, exists)
+PHP_METHOD(AwesomeRedis, exists)
 {
     REDIS_PROCESS_CMD(exists, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::del(string key)
+/* {{{ proto boolean AwesomeRedis::del(string key)
  */
-PHP_METHOD(Redis, del)
+PHP_METHOD(AwesomeRedis, del)
 {
     REDIS_PROCESS_CMD(del, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::unlink(string $key1, string $key2 [, string $key3...]) }}}
- * {{{ proto long Redis::unlink(array $keys) */
-PHP_METHOD(Redis, unlink)
+/* {{{ proto long AwesomeRedis::unlink(string $key1, string $key2 [, string $key3...]) }}}
+ * {{{ proto long AwesomeRedis::unlink(array $keys) */
+PHP_METHOD(AwesomeRedis, unlink)
 {
     REDIS_PROCESS_CMD(unlink, redis_long_response);
 }
@@ -1270,9 +1270,9 @@ PHP_REDIS_API void redis_watch_response(INTERNAL_FUNCTION_PARAMETERS,
         z_tab, ctx, redis_set_watch);
 }
 
-/* {{{ proto boolean Redis::watch(string key1, string key2...)
+/* {{{ proto boolean AwesomeRedis::watch(string key1, string key2...)
  */
-PHP_METHOD(Redis, watch)
+PHP_METHOD(AwesomeRedis, watch)
 {
     REDIS_PROCESS_CMD(watch, redis_watch_response);
 }
@@ -1291,210 +1291,210 @@ PHP_REDIS_API void redis_unwatch_response(INTERNAL_FUNCTION_PARAMETERS,
         z_tab, ctx, redis_clear_watch);
 }
 
-/* {{{ proto boolean Redis::unwatch()
+/* {{{ proto boolean AwesomeRedis::unwatch()
  */
-PHP_METHOD(Redis, unwatch)
+PHP_METHOD(AwesomeRedis, unwatch)
 {
     REDIS_PROCESS_KW_CMD("UNWATCH", redis_empty_cmd, redis_unwatch_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::keys(string pattern)
+/* {{{ proto array AwesomeRedis::keys(string pattern)
  */
-PHP_METHOD(Redis, keys)
+PHP_METHOD(AwesomeRedis, keys)
 {
     REDIS_PROCESS_KW_CMD("KEYS", redis_key_cmd, redis_mbulk_reply_raw);
 }
 /* }}} */
 
-/* {{{ proto int Redis::type(string key)
+/* {{{ proto int AwesomeRedis::type(string key)
  */
-PHP_METHOD(Redis, type)
+PHP_METHOD(AwesomeRedis, type)
 {
     REDIS_PROCESS_KW_CMD("TYPE", redis_key_cmd, redis_type_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::append(string key, string val) */
-PHP_METHOD(Redis, append)
+/* {{{ proto long AwesomeRedis::append(string key, string val) */
+PHP_METHOD(AwesomeRedis, append)
 {
     REDIS_PROCESS_KW_CMD("APPEND", redis_kv_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::GetRange(string key, long start, long end) */
-PHP_METHOD(Redis, getRange)
+/* {{{ proto string AwesomeRedis::GetRange(string key, long start, long end) */
+PHP_METHOD(AwesomeRedis, getRange)
 {
     REDIS_PROCESS_KW_CMD("GETRANGE", redis_key_long_long_cmd,
         redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::setRange(string key, long start, string value) */
-PHP_METHOD(Redis, setRange)
+/* {{{ proto string AwesomeRedis::setRange(string key, long start, string value) */
+PHP_METHOD(AwesomeRedis, setRange)
 {
     REDIS_PROCESS_KW_CMD("SETRANGE", redis_key_long_str_cmd,
         redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::getbit(string key, long idx) */
-PHP_METHOD(Redis, getBit)
+/* {{{ proto long AwesomeRedis::getbit(string key, long idx) */
+PHP_METHOD(AwesomeRedis, getBit)
 {
     REDIS_PROCESS_KW_CMD("GETBIT", redis_key_long_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::setbit(string key, long idx, bool|int value) */
-PHP_METHOD(Redis, setBit)
+/* {{{ proto long AwesomeRedis::setbit(string key, long idx, bool|int value) */
+PHP_METHOD(AwesomeRedis, setBit)
 {
     REDIS_PROCESS_CMD(setbit, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::strlen(string key) */
-PHP_METHOD(Redis, strlen)
+/* {{{ proto long AwesomeRedis::strlen(string key) */
+PHP_METHOD(AwesomeRedis, strlen)
 {
     REDIS_PROCESS_KW_CMD("STRLEN", redis_key_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::lPush(string key , string value)
+/* {{{ proto boolean AwesomeRedis::lPush(string key , string value)
  */
-PHP_METHOD(Redis, lPush)
+PHP_METHOD(AwesomeRedis, lPush)
 {
     REDIS_PROCESS_KW_CMD("LPUSH", redis_key_varval_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::rPush(string key , string value)
+/* {{{ proto boolean AwesomeRedis::rPush(string key , string value)
  */
-PHP_METHOD(Redis, rPush)
+PHP_METHOD(AwesomeRedis, rPush)
 {
     REDIS_PROCESS_KW_CMD("RPUSH", redis_key_varval_cmd, redis_long_response);
 }
 /* }}} */
 
-PHP_METHOD(Redis, lInsert)
+PHP_METHOD(AwesomeRedis, lInsert)
 {
     REDIS_PROCESS_CMD(linsert, redis_long_response);
 }
 
-/* {{{ proto long Redis::lPushx(string key, mixed value) */
-PHP_METHOD(Redis, lPushx)
+/* {{{ proto long AwesomeRedis::lPushx(string key, mixed value) */
+PHP_METHOD(AwesomeRedis, lPushx)
 {
     REDIS_PROCESS_KW_CMD("LPUSHX", redis_kv_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::rPushx(string key, mixed value) */
-PHP_METHOD(Redis, rPushx)
+/* {{{ proto long AwesomeRedis::rPushx(string key, mixed value) */
+PHP_METHOD(AwesomeRedis, rPushx)
 {
     REDIS_PROCESS_KW_CMD("RPUSHX", redis_kv_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::lPOP(string key) */
-PHP_METHOD(Redis, lPop)
+/* {{{ proto string AwesomeRedis::lPOP(string key) */
+PHP_METHOD(AwesomeRedis, lPop)
 {
     REDIS_PROCESS_KW_CMD("LPOP", redis_key_cmd, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::rPOP(string key) */
-PHP_METHOD(Redis, rPop)
+/* {{{ proto string AwesomeRedis::rPOP(string key) */
+PHP_METHOD(AwesomeRedis, rPop)
 {
     REDIS_PROCESS_KW_CMD("RPOP", redis_key_cmd, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::blPop(string key1, string key2, ..., int timeout) */
-PHP_METHOD(Redis, blPop)
+/* {{{ proto string AwesomeRedis::blPop(string key1, string key2, ..., int timeout) */
+PHP_METHOD(AwesomeRedis, blPop)
 {
     REDIS_PROCESS_KW_CMD("BLPOP", redis_blocking_pop_cmd, redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
-/* {{{ proto string Redis::brPop(string key1, string key2, ..., int timeout) */
-PHP_METHOD(Redis, brPop)
+/* {{{ proto string AwesomeRedis::brPop(string key1, string key2, ..., int timeout) */
+PHP_METHOD(AwesomeRedis, brPop)
 {
     REDIS_PROCESS_KW_CMD("BRPOP", redis_blocking_pop_cmd, redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
 
-/* {{{ proto int Redis::lLen(string key) */
-PHP_METHOD(Redis, lLen)
+/* {{{ proto int AwesomeRedis::lLen(string key) */
+PHP_METHOD(AwesomeRedis, lLen)
 {
     REDIS_PROCESS_KW_CMD("LLEN", redis_key_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::lrem(string list, string value, int count = 0) */
-PHP_METHOD(Redis, lrem)
+/* {{{ proto boolean AwesomeRedis::lrem(string list, string value, int count = 0) */
+PHP_METHOD(AwesomeRedis, lrem)
 {
     REDIS_PROCESS_CMD(lrem, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::ltrim(string key , int start , int end) */
-PHP_METHOD(Redis, ltrim)
+/* {{{ proto boolean AwesomeRedis::ltrim(string key , int start , int end) */
+PHP_METHOD(AwesomeRedis, ltrim)
 {
     REDIS_PROCESS_KW_CMD("LTRIM", redis_key_long_long_cmd,
         redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::lindex(string key , int index) */
-PHP_METHOD(Redis, lindex)
+/* {{{ proto string AwesomeRedis::lindex(string key , int index) */
+PHP_METHOD(AwesomeRedis, lindex)
 {
     REDIS_PROCESS_KW_CMD("LINDEX", redis_key_long_cmd, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::lrange(string key, int start , int end) */
-PHP_METHOD(Redis, lrange)
+/* {{{ proto array AwesomeRedis::lrange(string key, int start , int end) */
+PHP_METHOD(AwesomeRedis, lrange)
 {
     REDIS_PROCESS_KW_CMD("LRANGE", redis_key_long_long_cmd,
         redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
-/* {{{ proto long Redis::sAdd(string key , mixed value) */
-PHP_METHOD(Redis, sAdd)
+/* {{{ proto long AwesomeRedis::sAdd(string key , mixed value) */
+PHP_METHOD(AwesomeRedis, sAdd)
 {
     REDIS_PROCESS_KW_CMD("SADD", redis_key_varval_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::sAddArray(string key, array $values) */
-PHP_METHOD(Redis, sAddArray) {
+/* {{{ proto boolean AwesomeRedis::sAddArray(string key, array $values) */
+PHP_METHOD(AwesomeRedis, sAddArray) {
     REDIS_PROCESS_KW_CMD("SADD", redis_key_val_arr_cmd, redis_long_response);
 } /* }}} */
 
-/* {{{ proto int Redis::scard(string key) */
-PHP_METHOD(Redis, scard)
+/* {{{ proto int AwesomeRedis::scard(string key) */
+PHP_METHOD(AwesomeRedis, scard)
 {
     REDIS_PROCESS_KW_CMD("SCARD", redis_key_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::srem(string set, string value) */
-PHP_METHOD(Redis, srem)
+/* {{{ proto boolean AwesomeRedis::srem(string set, string value) */
+PHP_METHOD(AwesomeRedis, srem)
 {
     REDIS_PROCESS_KW_CMD("SREM", redis_key_varval_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::sMove(string src, string dst, mixed value) */
-PHP_METHOD(Redis, sMove)
+/* {{{ proto boolean AwesomeRedis::sMove(string src, string dst, mixed value) */
+PHP_METHOD(AwesomeRedis, sMove)
 {
     REDIS_PROCESS_CMD(smove, redis_1_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::sPop(string key) */
-PHP_METHOD(Redis, sPop)
+/* {{{ proto string AwesomeRedis::sPop(string key) */
+PHP_METHOD(AwesomeRedis, sPop)
 {
     if (ZEND_NUM_ARGS() == 1) {
         REDIS_PROCESS_KW_CMD("SPOP", redis_key_cmd, redis_string_response);
@@ -1507,8 +1507,8 @@ PHP_METHOD(Redis, sPop)
 }
 /* }}} */
 
-/* {{{ proto string Redis::sRandMember(string key [int count]) */
-PHP_METHOD(Redis, sRandMember)
+/* {{{ proto string AwesomeRedis::sRandMember(string key [int count]) */
+PHP_METHOD(AwesomeRedis, sRandMember)
 {
     char *cmd;
     int cmd_len;
@@ -1543,60 +1543,60 @@ PHP_METHOD(Redis, sRandMember)
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::sismember(string set, string value) */
-PHP_METHOD(Redis, sismember)
+/* {{{ proto boolean AwesomeRedis::sismember(string set, string value) */
+PHP_METHOD(AwesomeRedis, sismember)
 {
     REDIS_PROCESS_KW_CMD("SISMEMBER", redis_kv_cmd, redis_1_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sMembers(string set) */
-PHP_METHOD(Redis, sMembers)
+/* {{{ proto array AwesomeRedis::sMembers(string set) */
+PHP_METHOD(AwesomeRedis, sMembers)
 {
     REDIS_PROCESS_KW_CMD("SMEMBERS", redis_key_cmd,
         redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sInter(string key0, ... string keyN) */
-PHP_METHOD(Redis, sInter) {
+/* {{{ proto array AwesomeRedis::sInter(string key0, ... string keyN) */
+PHP_METHOD(AwesomeRedis, sInter) {
     REDIS_PROCESS_CMD(sinter, redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sInterStore(string dst, string key0,...string keyN) */
-PHP_METHOD(Redis, sInterStore) {
+/* {{{ proto array AwesomeRedis::sInterStore(string dst, string key0,...string keyN) */
+PHP_METHOD(AwesomeRedis, sInterStore) {
     REDIS_PROCESS_CMD(sinterstore, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sUnion(string key0, ... string keyN) */
-PHP_METHOD(Redis, sUnion) {
+/* {{{ proto array AwesomeRedis::sUnion(string key0, ... string keyN) */
+PHP_METHOD(AwesomeRedis, sUnion) {
     REDIS_PROCESS_CMD(sunion, redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sUnionStore(string dst, string key0, ... keyN) */
-PHP_METHOD(Redis, sUnionStore) {
+/* {{{ proto array AwesomeRedis::sUnionStore(string dst, string key0, ... keyN) */
+PHP_METHOD(AwesomeRedis, sUnionStore) {
     REDIS_PROCESS_CMD(sunionstore, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sDiff(string key0, ... string keyN) */
-PHP_METHOD(Redis, sDiff) {
+/* {{{ proto array AwesomeRedis::sDiff(string key0, ... string keyN) */
+PHP_METHOD(AwesomeRedis, sDiff) {
     REDIS_PROCESS_CMD(sdiff, redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sDiffStore(string dst, string key0, ... keyN) */
-PHP_METHOD(Redis, sDiffStore) {
+/* {{{ proto array AwesomeRedis::sDiffStore(string dst, string key0, ... keyN) */
+PHP_METHOD(AwesomeRedis, sDiffStore) {
     REDIS_PROCESS_CMD(sdiffstore, redis_long_response);
 }
 /* }}} */
 
 
-/* {{{ proto array Redis::sort(string key, array options) */
-PHP_METHOD(Redis, sort) {
+/* {{{ proto array AwesomeRedis::sort(string key, array options) */
+PHP_METHOD(AwesomeRedis, sort) {
     char *cmd;
     int cmd_len, have_store;
     RedisSock *redis_sock;
@@ -1717,138 +1717,138 @@ generic_sort_cmd(INTERNAL_FUNCTION_PARAMETERS, int desc, int alpha)
     REDIS_PROCESS_RESPONSE(redis_read_variant_reply);
 }
 
-/* {{{ proto array Redis::sortAsc(string key, string pattern, string get,
+/* {{{ proto array AwesomeRedis::sortAsc(string key, string pattern, string get,
  *                                int start, int end, bool getList]) */
-PHP_METHOD(Redis, sortAsc)
+PHP_METHOD(AwesomeRedis, sortAsc)
 {
     generic_sort_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, 0, 0);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sortAscAlpha(string key, string pattern, string get,
+/* {{{ proto array AwesomeRedis::sortAscAlpha(string key, string pattern, string get,
  *                                     int start, int end, bool getList]) */
-PHP_METHOD(Redis, sortAscAlpha)
+PHP_METHOD(AwesomeRedis, sortAscAlpha)
 {
     generic_sort_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, 0, 1);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sortDesc(string key, string pattern, string get,
+/* {{{ proto array AwesomeRedis::sortDesc(string key, string pattern, string get,
  *                                 int start, int end, bool getList]) */
-PHP_METHOD(Redis, sortDesc)
+PHP_METHOD(AwesomeRedis, sortDesc)
 {
     generic_sort_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, 1, 0);
 }
 /* }}} */
 
-/* {{{ proto array Redis::sortDescAlpha(string key, string pattern, string get,
+/* {{{ proto array AwesomeRedis::sortDescAlpha(string key, string pattern, string get,
  *                                      int start, int end, bool getList]) */
-PHP_METHOD(Redis, sortDescAlpha)
+PHP_METHOD(AwesomeRedis, sortDescAlpha)
 {
     generic_sort_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, 1, 1);
 }
 /* }}} */
 
-/* {{{ proto array Redis::expire(string key, int timeout) */
-PHP_METHOD(Redis, expire) {
+/* {{{ proto array AwesomeRedis::expire(string key, int timeout) */
+PHP_METHOD(AwesomeRedis, expire) {
     REDIS_PROCESS_KW_CMD("EXPIRE", redis_key_long_cmd, redis_1_response);
 }
 /* }}} */
 
-/* {{{ proto bool Redis::pexpire(string key, long ms) */
-PHP_METHOD(Redis, pexpire) {
+/* {{{ proto bool AwesomeRedis::pexpire(string key, long ms) */
+PHP_METHOD(AwesomeRedis, pexpire) {
     REDIS_PROCESS_KW_CMD("PEXPIRE", redis_key_long_cmd, redis_1_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::expireAt(string key, int timestamp) */
-PHP_METHOD(Redis, expireAt) {
+/* {{{ proto array AwesomeRedis::expireAt(string key, int timestamp) */
+PHP_METHOD(AwesomeRedis, expireAt) {
     REDIS_PROCESS_KW_CMD("EXPIREAT", redis_key_long_cmd, redis_1_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::pexpireAt(string key, int timestamp) */
-PHP_METHOD(Redis, pexpireAt) {
+/* {{{ proto array AwesomeRedis::pexpireAt(string key, int timestamp) */
+PHP_METHOD(AwesomeRedis, pexpireAt) {
     REDIS_PROCESS_KW_CMD("PEXPIREAT", redis_key_long_cmd, redis_1_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::lSet(string key, int index, string value) */
-PHP_METHOD(Redis, lSet) {
+/* {{{ proto array AwesomeRedis::lSet(string key, int index, string value) */
+PHP_METHOD(AwesomeRedis, lSet) {
     REDIS_PROCESS_KW_CMD("LSET", redis_key_long_val_cmd,
         redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::save() */
-PHP_METHOD(Redis, save)
+/* {{{ proto string AwesomeRedis::save() */
+PHP_METHOD(AwesomeRedis, save)
 {
     REDIS_PROCESS_KW_CMD("SAVE", redis_empty_cmd, redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::bgSave() */
-PHP_METHOD(Redis, bgSave)
+/* {{{ proto string AwesomeRedis::bgSave() */
+PHP_METHOD(AwesomeRedis, bgSave)
 {
     REDIS_PROCESS_KW_CMD("BGSAVE", redis_empty_cmd, redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto integer Redis::lastSave() */
-PHP_METHOD(Redis, lastSave)
+/* {{{ proto integer AwesomeRedis::lastSave() */
+PHP_METHOD(AwesomeRedis, lastSave)
 {
     REDIS_PROCESS_KW_CMD("LASTSAVE", redis_empty_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto bool Redis::flushDB([bool async]) */
-PHP_METHOD(Redis, flushDB)
+/* {{{ proto bool AwesomeRedis::flushDB([bool async]) */
+PHP_METHOD(AwesomeRedis, flushDB)
 {
     REDIS_PROCESS_KW_CMD("FLUSHDB", redis_flush_cmd, redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto bool Redis::flushAll([bool async]) */
-PHP_METHOD(Redis, flushAll)
+/* {{{ proto bool AwesomeRedis::flushAll([bool async]) */
+PHP_METHOD(AwesomeRedis, flushAll)
 {
     REDIS_PROCESS_KW_CMD("FLUSHALL", redis_flush_cmd, redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto int Redis::dbSize() */
-PHP_METHOD(Redis, dbSize)
+/* {{{ proto int AwesomeRedis::dbSize() */
+PHP_METHOD(AwesomeRedis, dbSize)
 {
     REDIS_PROCESS_KW_CMD("DBSIZE", redis_empty_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto bool Redis::auth(string passwd) */
-PHP_METHOD(Redis, auth) {
+/* {{{ proto bool AwesomeRedis::auth(string passwd) */
+PHP_METHOD(AwesomeRedis, auth) {
     REDIS_PROCESS_CMD(auth, redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::persist(string key) */
-PHP_METHOD(Redis, persist) {
+/* {{{ proto long AwesomeRedis::persist(string key) */
+PHP_METHOD(AwesomeRedis, persist) {
     REDIS_PROCESS_KW_CMD("PERSIST", redis_key_cmd, redis_1_response);
 }
 /* }}} */
 
 
-/* {{{ proto long Redis::ttl(string key) */
-PHP_METHOD(Redis, ttl) {
+/* {{{ proto long AwesomeRedis::ttl(string key) */
+PHP_METHOD(AwesomeRedis, ttl) {
     REDIS_PROCESS_KW_CMD("TTL", redis_key_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::pttl(string key) */
-PHP_METHOD(Redis, pttl) {
+/* {{{ proto long AwesomeRedis::pttl(string key) */
+PHP_METHOD(AwesomeRedis, pttl) {
     REDIS_PROCESS_KW_CMD("PTTL", redis_key_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::info() */
-PHP_METHOD(Redis, info) {
+/* {{{ proto array AwesomeRedis::info() */
+PHP_METHOD(AwesomeRedis, info) {
 
     zval *object;
     RedisSock *redis_sock;
@@ -1884,8 +1884,8 @@ PHP_METHOD(Redis, info) {
 }
 /* }}} */
 
-/* {{{ proto bool Redis::select(long dbNumber) */
-PHP_METHOD(Redis, select) {
+/* {{{ proto bool AwesomeRedis::select(long dbNumber) */
+PHP_METHOD(AwesomeRedis, select) {
 
     zval *object;
     RedisSock *redis_sock;
@@ -1915,13 +1915,13 @@ PHP_METHOD(Redis, select) {
 }
 /* }}} */
 
-/* {{{ proto bool Redis::swapdb(long srcdb, long dstdb) */
-PHP_METHOD(Redis, swapdb) {
+/* {{{ proto bool AwesomeRedis::swapdb(long srcdb, long dstdb) */
+PHP_METHOD(AwesomeRedis, swapdb) {
     REDIS_PROCESS_KW_CMD("SWAPDB", redis_long_long_cmd, redis_boolean_response);
 }
 
-/* {{{ proto bool Redis::move(string key, long dbindex) */
-PHP_METHOD(Redis, move) {
+/* {{{ proto bool AwesomeRedis::move(string key, long dbindex) */
+PHP_METHOD(AwesomeRedis, move) {
     REDIS_PROCESS_KW_CMD("MOVE", redis_key_long_cmd, redis_1_response);
 }
 /* }}} */
@@ -1976,34 +1976,34 @@ void generic_mset(INTERNAL_FUNCTION_PARAMETERS, char *kw, ResultCallback fun)
     REDIS_PROCESS_RESPONSE(fun);
 }
 
-/* {{{ proto bool Redis::mset(array (key => value, ...)) */
-PHP_METHOD(Redis, mset) {
+/* {{{ proto bool AwesomeRedis::mset(array (key => value, ...)) */
+PHP_METHOD(AwesomeRedis, mset) {
     generic_mset(INTERNAL_FUNCTION_PARAM_PASSTHRU, "MSET", redis_boolean_response);
 }
 /* }}} */
 
 
-/* {{{ proto bool Redis::msetnx(array (key => value, ...)) */
-PHP_METHOD(Redis, msetnx) {
+/* {{{ proto bool AwesomeRedis::msetnx(array (key => value, ...)) */
+PHP_METHOD(AwesomeRedis, msetnx) {
     generic_mset(INTERNAL_FUNCTION_PARAM_PASSTHRU, "MSETNX", redis_1_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::rpoplpush(string srckey, string dstkey) */
-PHP_METHOD(Redis, rpoplpush)
+/* {{{ proto string AwesomeRedis::rpoplpush(string srckey, string dstkey) */
+PHP_METHOD(AwesomeRedis, rpoplpush)
 {
     REDIS_PROCESS_KW_CMD("RPOPLPUSH", redis_key_key_cmd, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::brpoplpush(string src, string dst, int timeout) */
-PHP_METHOD(Redis, brpoplpush) {
+/* {{{ proto string AwesomeRedis::brpoplpush(string src, string dst, int timeout) */
+PHP_METHOD(AwesomeRedis, brpoplpush) {
     REDIS_PROCESS_CMD(brpoplpush, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::zAdd(string key, int score, string value) */
-PHP_METHOD(Redis, zAdd) {
+/* {{{ proto long AwesomeRedis::zAdd(string key, int score, string value) */
+PHP_METHOD(AwesomeRedis, zAdd) {
     REDIS_PROCESS_CMD(zadd, redis_long_response);
 }
 /* }}} */
@@ -2045,138 +2045,138 @@ static void generic_zrange_cmd(INTERNAL_FUNCTION_PARAMETERS, char *kw,
     }
 }
 
-/* {{{ proto array Redis::zRange(string key,int start,int end,bool scores = 0) */
-PHP_METHOD(Redis, zRange)
+/* {{{ proto array AwesomeRedis::zRange(string key,int start,int end,bool scores = 0) */
+PHP_METHOD(AwesomeRedis, zRange)
 {
     generic_zrange_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, "ZRANGE",
         redis_zrange_cmd);
 }
 
-/* {{{ proto array Redis::zRevRange(string k, long s, long e, bool scores = 0) */
-PHP_METHOD(Redis, zRevRange) {
+/* {{{ proto array AwesomeRedis::zRevRange(string k, long s, long e, bool scores = 0) */
+PHP_METHOD(AwesomeRedis, zRevRange) {
     generic_zrange_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, "ZREVRANGE",
         redis_zrange_cmd);
 }
 /* }}} */
 
-/* {{{ proto array Redis::zRangeByScore(string k,string s,string e,array opt) */
-PHP_METHOD(Redis, zRangeByScore) {
+/* {{{ proto array AwesomeRedis::zRangeByScore(string k,string s,string e,array opt) */
+PHP_METHOD(AwesomeRedis, zRangeByScore) {
     generic_zrange_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, "ZRANGEBYSCORE",
         redis_zrangebyscore_cmd);
 }
 /* }}} */
 
-/* {{{ proto array Redis::zRevRangeByScore(string key, string start, string end,
+/* {{{ proto array AwesomeRedis::zRevRangeByScore(string key, string start, string end,
  *                                         array options) */
-PHP_METHOD(Redis, zRevRangeByScore) {
+PHP_METHOD(AwesomeRedis, zRevRangeByScore) {
     generic_zrange_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, "ZREVRANGEBYSCORE",
         redis_zrangebyscore_cmd);
 }
 /* }}} */
 
-/* {{{ proto array Redis::zRangeByLex(string key, string min, string max, [
+/* {{{ proto array AwesomeRedis::zRangeByLex(string key, string min, string max, [
  *                                    offset, limit]) */
-PHP_METHOD(Redis, zRangeByLex) {
+PHP_METHOD(AwesomeRedis, zRangeByLex) {
     REDIS_PROCESS_KW_CMD("ZRANGEBYLEX", redis_zrangebylex_cmd,
         redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
-PHP_METHOD(Redis, zRevRangeByLex) {
+PHP_METHOD(AwesomeRedis, zRevRangeByLex) {
     REDIS_PROCESS_KW_CMD("ZREVRANGEBYLEX", redis_zrangebylex_cmd,
         redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
-/* {{{ proto long Redis::zLexCount(string key, string min, string max) */
-PHP_METHOD(Redis, zLexCount) {
+/* {{{ proto long AwesomeRedis::zLexCount(string key, string min, string max) */
+PHP_METHOD(AwesomeRedis, zLexCount) {
     REDIS_PROCESS_KW_CMD("ZLEXCOUNT", redis_gen_zlex_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::zRemRangeByLex(string key, string min, string max) */
-PHP_METHOD(Redis, zRemRangeByLex) {
+/* {{{ proto long AwesomeRedis::zRemRangeByLex(string key, string min, string max) */
+PHP_METHOD(AwesomeRedis, zRemRangeByLex) {
     REDIS_PROCESS_KW_CMD("ZREMRANGEBYLEX", redis_gen_zlex_cmd,
         redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::zRem(string key, string member) */
-PHP_METHOD(Redis, zRem)
+/* {{{ proto long AwesomeRedis::zRem(string key, string member) */
+PHP_METHOD(AwesomeRedis, zRem)
 {
     REDIS_PROCESS_KW_CMD("ZREM", redis_key_varval_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::zRemRangeByScore(string k, string s, string e) */
-PHP_METHOD(Redis, zRemRangeByScore)
+/* {{{ proto long AwesomeRedis::zRemRangeByScore(string k, string s, string e) */
+PHP_METHOD(AwesomeRedis, zRemRangeByScore)
 {
     REDIS_PROCESS_KW_CMD("ZREMRANGEBYSCORE", redis_key_str_str_cmd,
         redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::zRemRangeByRank(string key, long start, long end) */
-PHP_METHOD(Redis, zRemRangeByRank)
+/* {{{ proto long AwesomeRedis::zRemRangeByRank(string key, long start, long end) */
+PHP_METHOD(AwesomeRedis, zRemRangeByRank)
 {
     REDIS_PROCESS_KW_CMD("ZREMRANGEBYRANK", redis_key_long_long_cmd,
         redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto array Redis::zCount(string key, string start , string end) */
-PHP_METHOD(Redis, zCount)
+/* {{{ proto array AwesomeRedis::zCount(string key, string start , string end) */
+PHP_METHOD(AwesomeRedis, zCount)
 {
     REDIS_PROCESS_KW_CMD("ZCOUNT", redis_key_str_str_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::zCard(string key) */
-PHP_METHOD(Redis, zCard)
+/* {{{ proto long AwesomeRedis::zCard(string key) */
+PHP_METHOD(AwesomeRedis, zCard)
 {
     REDIS_PROCESS_KW_CMD("ZCARD", redis_key_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto double Redis::zScore(string key, mixed member) */
-PHP_METHOD(Redis, zScore)
+/* {{{ proto double AwesomeRedis::zScore(string key, mixed member) */
+PHP_METHOD(AwesomeRedis, zScore)
 {
     REDIS_PROCESS_KW_CMD("ZSCORE", redis_kv_cmd,
         redis_bulk_double_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::zRank(string key, string member) */
-PHP_METHOD(Redis, zRank) {
+/* {{{ proto long AwesomeRedis::zRank(string key, string member) */
+PHP_METHOD(AwesomeRedis, zRank) {
     REDIS_PROCESS_KW_CMD("ZRANK", redis_kv_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::zRevRank(string key, string member) */
-PHP_METHOD(Redis, zRevRank) {
+/* {{{ proto long AwesomeRedis::zRevRank(string key, string member) */
+PHP_METHOD(AwesomeRedis, zRevRank) {
     REDIS_PROCESS_KW_CMD("ZREVRANK", redis_kv_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto double Redis::zIncrBy(string key, double value, mixed member) */
-PHP_METHOD(Redis, zIncrBy)
+/* {{{ proto double AwesomeRedis::zIncrBy(string key, double value, mixed member) */
+PHP_METHOD(AwesomeRedis, zIncrBy)
 {
     REDIS_PROCESS_CMD(zincrby, redis_bulk_double_response);
 }
 /* }}} */
 
 /* zinterstore */
-PHP_METHOD(Redis, zinterstore) {
+PHP_METHOD(AwesomeRedis, zinterstore) {
     REDIS_PROCESS_KW_CMD("ZINTERSTORE", redis_zinter_cmd, redis_long_response);
 }
 
 /* zunionstore */
-PHP_METHOD(Redis, zunionstore) {
+PHP_METHOD(AwesomeRedis, zunionstore) {
     REDIS_PROCESS_KW_CMD("ZUNIONSTORE", redis_zinter_cmd, redis_long_response);
 }
 
-/* {{{ proto array Redis::zPopMax(string key) */
-PHP_METHOD(Redis, zPopMax)
+/* {{{ proto array AwesomeRedis::zPopMax(string key) */
+PHP_METHOD(AwesomeRedis, zPopMax)
 {
     if (ZEND_NUM_ARGS() == 1) {
         REDIS_PROCESS_KW_CMD("ZPOPMAX", redis_key_cmd, redis_mbulk_reply_zipped_keys_dbl);
@@ -2188,8 +2188,8 @@ PHP_METHOD(Redis, zPopMax)
 }
 /* }}} */
 
-/* {{{ proto array Redis::zPopMin(string key) */
-PHP_METHOD(Redis, zPopMin)
+/* {{{ proto array AwesomeRedis::zPopMin(string key) */
+PHP_METHOD(AwesomeRedis, zPopMin)
 {
     if (ZEND_NUM_ARGS() == 1) {
         REDIS_PROCESS_KW_CMD("ZPOPMIN", redis_key_cmd, redis_mbulk_reply_zipped_keys_dbl);
@@ -2201,117 +2201,117 @@ PHP_METHOD(Redis, zPopMin)
 }
 /* }}} */
 
-/* {{{ proto Redis::bzPopMax(Array(keys) [, timeout]): Array */
-PHP_METHOD(Redis, bzPopMax) {
+/* {{{ proto AwesomeRedis::bzPopMax(Array(keys) [, timeout]): Array */
+PHP_METHOD(AwesomeRedis, bzPopMax) {
     REDIS_PROCESS_KW_CMD("BZPOPMAX", redis_blocking_pop_cmd, redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
-/* {{{ proto Redis::bzPopMin(Array(keys) [, timeout]): Array */
-PHP_METHOD(Redis, bzPopMin) {
+/* {{{ proto AwesomeRedis::bzPopMin(Array(keys) [, timeout]): Array */
+PHP_METHOD(AwesomeRedis, bzPopMin) {
     REDIS_PROCESS_KW_CMD("BZPOPMIN", redis_blocking_pop_cmd, redis_sock_read_multibulk_reply);
 }
 /* }}} */
 
 /* hashes */
 
-/* {{{ proto long Redis::hset(string key, string mem, string val) */
-PHP_METHOD(Redis, hSet)
+/* {{{ proto long AwesomeRedis::hset(string key, string mem, string val) */
+PHP_METHOD(AwesomeRedis, hSet)
 {
     REDIS_PROCESS_CMD(hset, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto bool Redis::hSetNx(string key, string mem, string val) */
-PHP_METHOD(Redis, hSetNx)
+/* {{{ proto bool AwesomeRedis::hSetNx(string key, string mem, string val) */
+PHP_METHOD(AwesomeRedis, hSetNx)
 {
     REDIS_PROCESS_CMD(hsetnx, redis_1_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::hget(string key, string mem) */
-PHP_METHOD(Redis, hGet)
+/* {{{ proto string AwesomeRedis::hget(string key, string mem) */
+PHP_METHOD(AwesomeRedis, hGet)
 {
     REDIS_PROCESS_KW_CMD("HGET", redis_key_str_cmd, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::hLen(string key) */
-PHP_METHOD(Redis, hLen)
+/* {{{ proto long AwesomeRedis::hLen(string key) */
+PHP_METHOD(AwesomeRedis, hLen)
 {
     REDIS_PROCESS_KW_CMD("HLEN", redis_key_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::hDel(string key, string mem1, ... memN) */
-PHP_METHOD(Redis, hDel)
+/* {{{ proto long AwesomeRedis::hDel(string key, string mem1, ... memN) */
+PHP_METHOD(AwesomeRedis, hDel)
 {
     REDIS_PROCESS_CMD(hdel, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto bool Redis::hExists(string key, string mem) */
-PHP_METHOD(Redis, hExists)
+/* {{{ proto bool AwesomeRedis::hExists(string key, string mem) */
+PHP_METHOD(AwesomeRedis, hExists)
 {
     REDIS_PROCESS_KW_CMD("HEXISTS", redis_key_str_cmd, redis_1_response);
 }
 
-/* {{{ proto array Redis::hkeys(string key) */
-PHP_METHOD(Redis, hKeys)
+/* {{{ proto array AwesomeRedis::hkeys(string key) */
+PHP_METHOD(AwesomeRedis, hKeys)
 {
     REDIS_PROCESS_KW_CMD("HKEYS", redis_key_cmd, redis_mbulk_reply_raw);
 }
 /* }}} */
 
-/* {{{ proto array Redis::hvals(string key) */
-PHP_METHOD(Redis, hVals)
+/* {{{ proto array AwesomeRedis::hvals(string key) */
+PHP_METHOD(AwesomeRedis, hVals)
 {
     REDIS_PROCESS_KW_CMD("HVALS", redis_key_cmd,
         redis_sock_read_multibulk_reply);
 }
 
-/* {{{ proto array Redis::hgetall(string key) */
-PHP_METHOD(Redis, hGetAll) {
+/* {{{ proto array AwesomeRedis::hgetall(string key) */
+PHP_METHOD(AwesomeRedis, hGetAll) {
     REDIS_PROCESS_KW_CMD("HGETALL", redis_key_cmd, redis_mbulk_reply_zipped_vals);
 }
 /* }}} */
 
-/* {{{ proto double Redis::hIncrByFloat(string k, string me, double v) */
-PHP_METHOD(Redis, hIncrByFloat)
+/* {{{ proto double AwesomeRedis::hIncrByFloat(string k, string me, double v) */
+PHP_METHOD(AwesomeRedis, hIncrByFloat)
 {
     REDIS_PROCESS_CMD(hincrbyfloat, redis_bulk_double_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::hincrby(string key, string mem, long byval) */
-PHP_METHOD(Redis, hIncrBy)
+/* {{{ proto long AwesomeRedis::hincrby(string key, string mem, long byval) */
+PHP_METHOD(AwesomeRedis, hIncrBy)
 {
     REDIS_PROCESS_CMD(hincrby, redis_long_response);
 }
 /* }}} */
 
-/* {{{ array Redis::hMget(string hash, array keys) */
-PHP_METHOD(Redis, hMget) {
+/* {{{ array AwesomeRedis::hMget(string hash, array keys) */
+PHP_METHOD(AwesomeRedis, hMget) {
     REDIS_PROCESS_CMD(hmget, redis_mbulk_reply_assoc);
 }
 /* }}} */
 
-/* {{{ proto bool Redis::hmset(string key, array keyvals) */
-PHP_METHOD(Redis, hMset)
+/* {{{ proto bool AwesomeRedis::hmset(string key, array keyvals) */
+PHP_METHOD(AwesomeRedis, hMset)
 {
     REDIS_PROCESS_CMD(hmset, redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto long Redis::hstrlen(string key, string field) */
-PHP_METHOD(Redis, hStrLen) {
+/* {{{ proto long AwesomeRedis::hstrlen(string key, string field) */
+PHP_METHOD(AwesomeRedis, hStrLen) {
     REDIS_PROCESS_CMD(hstrlen, redis_long_response);
 }
 /* }}} */
 
 /* flag : get, set {ATOMIC, MULTI, PIPELINE} */
 
-PHP_METHOD(Redis, multi)
+PHP_METHOD(AwesomeRedis, multi)
 {
 
     RedisSock *redis_sock;
@@ -2368,7 +2368,7 @@ PHP_METHOD(Redis, multi)
             }
         }
     } else {
-        php_error_docref(NULL, E_WARNING, "Unknown mode sent to Redis::multi");
+        php_error_docref(NULL, E_WARNING, "Unknown mode sent to AwesomeRedis::multi");
         RETURN_FALSE;
     }
 
@@ -2376,7 +2376,7 @@ PHP_METHOD(Redis, multi)
 }
 
 /* discard */
-PHP_METHOD(Redis, discard)
+PHP_METHOD(AwesomeRedis, discard)
 {
     int ret = FAILURE;
     RedisSock *redis_sock;
@@ -2438,7 +2438,7 @@ PHP_REDIS_API int redis_sock_read_multibulk_multi_reply(INTERNAL_FUNCTION_PARAME
 
 
 /* exec */
-PHP_METHOD(Redis, exec)
+PHP_METHOD(AwesomeRedis, exec)
 {
     RedisSock *redis_sock;
     char *cmd;
@@ -2558,7 +2558,7 @@ redis_sock_read_multibulk_multi_reply_loop(INTERNAL_FUNCTION_PARAMETERS,
     return 0;
 }
 
-PHP_METHOD(Redis, pipeline)
+PHP_METHOD(AwesomeRedis, pipeline)
 {
     RedisSock *redis_sock;
     zval *object;
@@ -2589,22 +2589,22 @@ PHP_METHOD(Redis, pipeline)
     RETURN_ZVAL(getThis(), 1, 0);
 }
 
-/* {{{ proto long Redis::publish(string channel, string msg) */
-PHP_METHOD(Redis, publish)
+/* {{{ proto long AwesomeRedis::publish(string channel, string msg) */
+PHP_METHOD(AwesomeRedis, publish)
 {
     REDIS_PROCESS_KW_CMD("PUBLISH", redis_key_str_cmd, redis_long_response);
 }
 /* }}} */
 
-/* {{{ proto void Redis::psubscribe(Array(pattern1, pattern2, ... patternN)) */
-PHP_METHOD(Redis, psubscribe)
+/* {{{ proto void AwesomeRedis::psubscribe(Array(pattern1, pattern2, ... patternN)) */
+PHP_METHOD(AwesomeRedis, psubscribe)
 {
     REDIS_PROCESS_KW_CMD("PSUBSCRIBE", redis_subscribe_cmd,
         redis_subscribe_response);
 }
 
-/* {{{ proto void Redis::subscribe(Array(channel1, channel2, ... channelN)) */
-PHP_METHOD(Redis, subscribe) {
+/* {{{ proto void AwesomeRedis::subscribe(Array(channel1, channel2, ... channelN)) */
+PHP_METHOD(AwesomeRedis, subscribe) {
     REDIS_PROCESS_KW_CMD("SUBSCRIBE", redis_subscribe_cmd,
         redis_subscribe_response);
 }
@@ -2688,28 +2688,28 @@ PHP_REDIS_API void generic_unsubscribe_cmd(INTERNAL_FUNCTION_PARAMETERS,
     }
 }
 
-PHP_METHOD(Redis, unsubscribe)
+PHP_METHOD(AwesomeRedis, unsubscribe)
 {
     REDIS_PROCESS_KW_CMD("UNSUBSCRIBE", redis_unsubscribe_cmd,
         redis_unsubscribe_response);
 }
 
-PHP_METHOD(Redis, punsubscribe)
+PHP_METHOD(AwesomeRedis, punsubscribe)
 {
     REDIS_PROCESS_KW_CMD("PUNSUBSCRIBE", redis_unsubscribe_cmd,
         redis_unsubscribe_response);
 }
 
-/* {{{ proto string Redis::bgrewriteaof() */
-PHP_METHOD(Redis, bgrewriteaof)
+/* {{{ proto string AwesomeRedis::bgrewriteaof() */
+PHP_METHOD(AwesomeRedis, bgrewriteaof)
 {
     REDIS_PROCESS_KW_CMD("BGREWRITEAOF", redis_empty_cmd,
         redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto string Redis::slaveof([host, port]) */
-PHP_METHOD(Redis, slaveof)
+/* {{{ proto string AwesomeRedis::slaveof([host, port]) */
+PHP_METHOD(AwesomeRedis, slaveof)
 {
     zval *object;
     RedisSock *redis_sock;
@@ -2743,8 +2743,8 @@ PHP_METHOD(Redis, slaveof)
 }
 /* }}} */
 
-/* {{{ proto string Redis::object(key) */
-PHP_METHOD(Redis, object)
+/* {{{ proto string AwesomeRedis::object(key) */
+PHP_METHOD(AwesomeRedis, object)
 {
     RedisSock *redis_sock;
     char *cmd; int cmd_len;
@@ -2778,8 +2778,8 @@ PHP_METHOD(Redis, object)
 }
 /* }}} */
 
-/* {{{ proto string Redis::getOption($option) */
-PHP_METHOD(Redis, getOption)
+/* {{{ proto string AwesomeRedis::getOption($option) */
+PHP_METHOD(AwesomeRedis, getOption)
 {
     RedisSock *redis_sock;
 
@@ -2791,8 +2791,8 @@ PHP_METHOD(Redis, getOption)
 }
 /* }}} */
 
-/* {{{ proto string Redis::setOption(string $option, mixed $value) */
-PHP_METHOD(Redis, setOption)
+/* {{{ proto string AwesomeRedis::setOption(string $option, mixed $value) */
+PHP_METHOD(AwesomeRedis, setOption)
 {
     RedisSock *redis_sock;
 
@@ -2804,8 +2804,8 @@ PHP_METHOD(Redis, setOption)
 }
 /* }}} */
 
-/* {{{ proto boolean Redis::config(string op, string key [, mixed value]) */
-PHP_METHOD(Redis, config)
+/* {{{ proto boolean AwesomeRedis::config(string op, string key [, mixed value]) */
+PHP_METHOD(AwesomeRedis, config)
 {
     zval *object;
     RedisSock *redis_sock;
@@ -2859,8 +2859,8 @@ PHP_METHOD(Redis, config)
 /* }}} */
 
 
-/* {{{ proto boolean Redis::slowlog(string arg, [int option]) */
-PHP_METHOD(Redis, slowlog) {
+/* {{{ proto boolean AwesomeRedis::slowlog(string arg, [int option]) */
+PHP_METHOD(AwesomeRedis, slowlog) {
     zval *object;
     RedisSock *redis_sock;
     char *arg, *cmd;
@@ -2914,8 +2914,8 @@ PHP_METHOD(Redis, slowlog) {
     REDIS_PROCESS_RESPONSE(redis_read_variant_reply);
 }
 
-/* {{{ proto Redis::wait(int num_slaves, int ms) }}} */
-PHP_METHOD(Redis, wait) {
+/* {{{ proto AwesomeRedis::wait(int num_slaves, int ms) }}} */
+PHP_METHOD(AwesomeRedis, wait) {
     zval *object;
     RedisSock *redis_sock;
     zend_long num_slaves, timeout;
@@ -2996,11 +2996,11 @@ redis_build_pubsub_cmd(RedisSock *redis_sock, char **ret, PUBSUB_TYPE type,
 }
 
 /*
- * {{{ proto Redis::pubsub("channels", pattern);
- *     proto Redis::pubsub("numsub", Array channels);
- *     proto Redis::pubsub("numpat"); }}}
+ * {{{ proto AwesomeRedis::pubsub("channels", pattern);
+ *     proto AwesomeRedis::pubsub("numsub", Array channels);
+ *     proto AwesomeRedis::pubsub("numpat"); }}}
  */
-PHP_METHOD(Redis, pubsub) {
+PHP_METHOD(AwesomeRedis, pubsub) {
     zval *object;
     RedisSock *redis_sock;
     char *keyword, *cmd;
@@ -3070,23 +3070,23 @@ PHP_METHOD(Redis, pubsub) {
     }
 }
 
-/* {{{ proto variant Redis::eval(string script, [array keys, long num_keys]) */
-PHP_METHOD(Redis, eval)
+/* {{{ proto variant AwesomeRedis::eval(string script, [array keys, long num_keys]) */
+PHP_METHOD(AwesomeRedis, eval)
 {
     REDIS_PROCESS_KW_CMD("EVAL", redis_eval_cmd, redis_read_raw_variant_reply);
 }
 
-/* {{{ proto variant Redis::evalsha(string sha1, [array keys, long num_keys]) */
-PHP_METHOD(Redis, evalsha) {
+/* {{{ proto variant AwesomeRedis::evalsha(string sha1, [array keys, long num_keys]) */
+PHP_METHOD(AwesomeRedis, evalsha) {
     REDIS_PROCESS_KW_CMD("EVALSHA", redis_eval_cmd, redis_read_raw_variant_reply);
 }
 
-/* {{{ proto status Redis::script('flush')
- * {{{ proto status Redis::script('kill')
- * {{{ proto string Redis::script('load', lua_script)
+/* {{{ proto status AwesomeRedis::script('flush')
+ * {{{ proto status AwesomeRedis::script('kill')
+ * {{{ proto string AwesomeRedis::script('load', lua_script)
  * {{{ proto int Reids::script('exists', script_sha1 [, script_sha2, ...])
  */
-PHP_METHOD(Redis, script) {
+PHP_METHOD(AwesomeRedis, script) {
     zval *z_args;
     RedisSock *redis_sock;
     smart_string cmd = {0};
@@ -3124,32 +3124,32 @@ PHP_METHOD(Redis, script) {
 }
 
 /* {{{ proto DUMP key */
-PHP_METHOD(Redis, dump) {
+PHP_METHOD(AwesomeRedis, dump) {
     REDIS_PROCESS_KW_CMD("DUMP", redis_key_cmd, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto Redis::restore(ttl, key, value) */
-PHP_METHOD(Redis, restore) {
+/* {{{ proto AwesomeRedis::restore(ttl, key, value) */
+PHP_METHOD(AwesomeRedis, restore) {
     REDIS_PROCESS_KW_CMD("RESTORE", redis_key_long_val_cmd,
         redis_boolean_response);
 }
 /* }}} */
 
-/* {{{ proto Redis::debug(string key) */
-PHP_METHOD(Redis, debug) {
+/* {{{ proto AwesomeRedis::debug(string key) */
+PHP_METHOD(AwesomeRedis, debug) {
     REDIS_PROCESS_KW_CMD("DEBUG", redis_key_cmd, redis_string_response);
 }
 /* }}} */
 
-/* {{{ proto Redis::migrate(host port key dest-db timeout [bool copy,
+/* {{{ proto AwesomeRedis::migrate(host port key dest-db timeout [bool copy,
  *                          bool replace]) */
-PHP_METHOD(Redis, migrate) {
+PHP_METHOD(AwesomeRedis, migrate) {
     REDIS_PROCESS_CMD(migrate, redis_boolean_response);
 }
 
-/* {{{ proto Redis::_prefix(key) */
-PHP_METHOD(Redis, _prefix) {
+/* {{{ proto AwesomeRedis::_prefix(key) */
+PHP_METHOD(AwesomeRedis, _prefix) {
     RedisSock *redis_sock;
 
     if ((redis_sock = redis_sock_get_instance(getThis(), 0)) == NULL) {
@@ -3159,8 +3159,8 @@ PHP_METHOD(Redis, _prefix) {
     redis_prefix_handler(INTERNAL_FUNCTION_PARAM_PASSTHRU, redis_sock);
 }
 
-/* {{{ proto Redis::_serialize(value) */
-PHP_METHOD(Redis, _serialize) {
+/* {{{ proto AwesomeRedis::_serialize(value) */
+PHP_METHOD(AwesomeRedis, _serialize) {
     RedisSock *redis_sock;
 
     // Grab socket
@@ -3171,8 +3171,8 @@ PHP_METHOD(Redis, _serialize) {
     redis_serialize_handler(INTERNAL_FUNCTION_PARAM_PASSTHRU, redis_sock);
 }
 
-/* {{{ proto Redis::_unserialize(value) */
-PHP_METHOD(Redis, _unserialize) {
+/* {{{ proto AwesomeRedis::_unserialize(value) */
+PHP_METHOD(AwesomeRedis, _unserialize) {
     RedisSock *redis_sock;
 
     // Grab socket
@@ -3184,8 +3184,8 @@ PHP_METHOD(Redis, _unserialize) {
         redis_exception_ce);
 }
 
-/* {{{ proto Redis::getLastError() */
-PHP_METHOD(Redis, getLastError) {
+/* {{{ proto AwesomeRedis::getLastError() */
+PHP_METHOD(AwesomeRedis, getLastError) {
     zval *object;
     RedisSock *redis_sock;
 
@@ -3208,8 +3208,8 @@ PHP_METHOD(Redis, getLastError) {
     RETURN_NULL();
 }
 
-/* {{{ proto Redis::clearLastError() */
-PHP_METHOD(Redis, clearLastError) {
+/* {{{ proto AwesomeRedis::clearLastError() */
+PHP_METHOD(AwesomeRedis, clearLastError) {
     zval *object;
     RedisSock *redis_sock;
 
@@ -3234,9 +3234,9 @@ PHP_METHOD(Redis, clearLastError) {
 }
 
 /*
- * {{{ proto long Redis::getMode()
+ * {{{ proto long AwesomeRedis::getMode()
  */
-PHP_METHOD(Redis, getMode) {
+PHP_METHOD(AwesomeRedis, getMode) {
     zval *object;
     RedisSock *redis_sock;
 
@@ -3259,13 +3259,13 @@ PHP_METHOD(Redis, getMode) {
     }
 }
 
-/* {{{ proto Redis::time() */
-PHP_METHOD(Redis, time) {
+/* {{{ proto AwesomeRedis::time() */
+PHP_METHOD(AwesomeRedis, time) {
     REDIS_PROCESS_KW_CMD("TIME", redis_empty_cmd, redis_mbulk_reply_raw);
 }
 
-/* {{{ proto array Redis::role() */
-PHP_METHOD(Redis, role) {
+/* {{{ proto array AwesomeRedis::role() */
+PHP_METHOD(AwesomeRedis, role) {
     REDIS_PROCESS_KW_CMD("ROLE", redis_empty_cmd, redis_read_variant_reply);
 }
 
@@ -3273,8 +3273,8 @@ PHP_METHOD(Redis, role) {
  * Introspection stuff
  */
 
-/* {{{ proto Redis::IsConnected */
-PHP_METHOD(Redis, isConnected) {
+/* {{{ proto AwesomeRedis::IsConnected */
+PHP_METHOD(AwesomeRedis, isConnected) {
     RedisSock *redis_sock;
 
     if((redis_sock = redis_sock_get_connected(INTERNAL_FUNCTION_PARAM_PASSTHRU))) {
@@ -3284,8 +3284,8 @@ PHP_METHOD(Redis, isConnected) {
     }
 }
 
-/* {{{ proto Redis::getHost() */
-PHP_METHOD(Redis, getHost) {
+/* {{{ proto AwesomeRedis::getHost() */
+PHP_METHOD(AwesomeRedis, getHost) {
     RedisSock *redis_sock;
 
     if((redis_sock = redis_sock_get_connected(INTERNAL_FUNCTION_PARAM_PASSTHRU))) {
@@ -3295,8 +3295,8 @@ PHP_METHOD(Redis, getHost) {
     }
 }
 
-/* {{{ proto Redis::getPort() */
-PHP_METHOD(Redis, getPort) {
+/* {{{ proto AwesomeRedis::getPort() */
+PHP_METHOD(AwesomeRedis, getPort) {
     RedisSock *redis_sock;
 
     if((redis_sock = redis_sock_get_connected(INTERNAL_FUNCTION_PARAM_PASSTHRU))) {
@@ -3307,8 +3307,8 @@ PHP_METHOD(Redis, getPort) {
     }
 }
 
-/* {{{ proto Redis::getDBNum */
-PHP_METHOD(Redis, getDBNum) {
+/* {{{ proto AwesomeRedis::getDBNum */
+PHP_METHOD(AwesomeRedis, getDBNum) {
     RedisSock *redis_sock;
 
     if((redis_sock = redis_sock_get_connected(INTERNAL_FUNCTION_PARAM_PASSTHRU))) {
@@ -3319,8 +3319,8 @@ PHP_METHOD(Redis, getDBNum) {
     }
 }
 
-/* {{{ proto Redis::getTimeout */
-PHP_METHOD(Redis, getTimeout) {
+/* {{{ proto AwesomeRedis::getTimeout */
+PHP_METHOD(AwesomeRedis, getTimeout) {
     RedisSock *redis_sock;
 
     if((redis_sock = redis_sock_get_connected(INTERNAL_FUNCTION_PARAM_PASSTHRU))) {
@@ -3330,8 +3330,8 @@ PHP_METHOD(Redis, getTimeout) {
     }
 }
 
-/* {{{ proto Redis::getReadTimeout */
-PHP_METHOD(Redis, getReadTimeout) {
+/* {{{ proto AwesomeRedis::getReadTimeout */
+PHP_METHOD(AwesomeRedis, getReadTimeout) {
     RedisSock *redis_sock;
 
     if((redis_sock = redis_sock_get_connected(INTERNAL_FUNCTION_PARAM_PASSTHRU))) {
@@ -3341,8 +3341,8 @@ PHP_METHOD(Redis, getReadTimeout) {
     }
 }
 
-/* {{{ proto Redis::getPersistentID */
-PHP_METHOD(Redis, getPersistentID) {
+/* {{{ proto AwesomeRedis::getPersistentID */
+PHP_METHOD(AwesomeRedis, getPersistentID) {
     RedisSock *redis_sock;
 
     if ((redis_sock = redis_sock_get_connected(INTERNAL_FUNCTION_PARAM_PASSTHRU)) == NULL) {
@@ -3353,8 +3353,8 @@ PHP_METHOD(Redis, getPersistentID) {
     RETURN_STRINGL(ZSTR_VAL(redis_sock->persistent_id), ZSTR_LEN(redis_sock->persistent_id));
 }
 
-/* {{{ proto Redis::getAuth */
-PHP_METHOD(Redis, getAuth) {
+/* {{{ proto AwesomeRedis::getAuth */
+PHP_METHOD(AwesomeRedis, getAuth) {
     RedisSock *redis_sock;
 
     if ((redis_sock = redis_sock_get_connected(INTERNAL_FUNCTION_PARAM_PASSTHRU)) == NULL) {
@@ -3371,7 +3371,7 @@ PHP_METHOD(Redis, getAuth) {
  * $redis->client('setname', <name>);
  * $redis->client('getname');
  */
-PHP_METHOD(Redis, client) {
+PHP_METHOD(AwesomeRedis, client) {
     zval *object;
     RedisSock *redis_sock;
     char *cmd, *opt = NULL, *arg = NULL;
@@ -3417,8 +3417,8 @@ PHP_METHOD(Redis, client) {
     }
 }
 
-/* {{{ proto mixed Redis::rawcommand(string $command, [ $arg1 ... $argN]) */
-PHP_METHOD(Redis, rawcommand) {
+/* {{{ proto mixed AwesomeRedis::rawcommand(string $command, [ $arg1 ... $argN]) */
+PHP_METHOD(AwesomeRedis, rawcommand) {
     int argc = ZEND_NUM_ARGS(), cmd_len;
     char *cmd = NULL;
     RedisSock *redis_sock;
@@ -3456,10 +3456,10 @@ PHP_METHOD(Redis, rawcommand) {
 }
 /* }}} */
 
-/* {{{ proto array Redis::command()
- *     proto array Redis::command('info', string cmd)
- *     proto array Redis::command('getkeys', array cmd_args) */
-PHP_METHOD(Redis, command) {
+/* {{{ proto array AwesomeRedis::command()
+ *     proto array AwesomeRedis::command('info', string cmd)
+ *     proto array AwesomeRedis::command('getkeys', array cmd_args) */
+PHP_METHOD(AwesomeRedis, command) {
     REDIS_PROCESS_CMD(command, redis_read_variant_reply);
 }
 /* }}} */
@@ -3516,7 +3516,7 @@ redis_build_scan_cmd(char **cmd, REDIS_SCAN_TYPE type, char *key, int key_len,
     return cmdstr.len;
 }
 
-/* {{{ proto redis::scan(&$iterator, [pattern, [count]]) */
+/* {{{ proto AwesomeRedis::scan(&$iterator, [pattern, [count]]) */
 PHP_REDIS_API void
 generic_scan_cmd(INTERNAL_FUNCTION_PARAMETERS, REDIS_SCAN_TYPE type) {
     zval *object, *z_iter;
@@ -3622,16 +3622,16 @@ generic_scan_cmd(INTERNAL_FUNCTION_PARAMETERS, REDIS_SCAN_TYPE type) {
     Z_LVAL_P(z_iter) = iter;
 }
 
-PHP_METHOD(Redis, scan) {
+PHP_METHOD(AwesomeRedis, scan) {
     generic_scan_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, TYPE_SCAN);
 }
-PHP_METHOD(Redis, hscan) {
+PHP_METHOD(AwesomeRedis, hscan) {
     generic_scan_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, TYPE_HSCAN);
 }
-PHP_METHOD(Redis, sscan) {
+PHP_METHOD(AwesomeRedis, sscan) {
     generic_scan_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, TYPE_SSCAN);
 }
-PHP_METHOD(Redis, zscan) {
+PHP_METHOD(AwesomeRedis, zscan) {
     generic_scan_cmd(INTERNAL_FUNCTION_PARAM_PASSTHRU, TYPE_ZSCAN);
 }
 
@@ -3639,18 +3639,18 @@ PHP_METHOD(Redis, zscan) {
  * HyperLogLog based commands
  */
 
-/* {{{ proto Redis::pfAdd(string key, array elements) }}} */
-PHP_METHOD(Redis, pfadd) {
+/* {{{ proto AwesomeRedis::pfAdd(string key, array elements) }}} */
+PHP_METHOD(AwesomeRedis, pfadd) {
     REDIS_PROCESS_CMD(pfadd, redis_long_response);
 }
 
-/* {{{ proto Redis::pfCount(string key) }}}*/
-PHP_METHOD(Redis, pfcount) {
+/* {{{ proto AwesomeRedis::pfCount(string key) }}}*/
+PHP_METHOD(AwesomeRedis, pfcount) {
     REDIS_PROCESS_CMD(pfcount, redis_long_response);
 }
 
-/* {{{ proto Redis::pfMerge(string dstkey, array keys) }}}*/
-PHP_METHOD(Redis, pfmerge) {
+/* {{{ proto AwesomeRedis::pfMerge(string dstkey, array keys) }}}*/
+PHP_METHOD(AwesomeRedis, pfmerge) {
     REDIS_PROCESS_CMD(pfmerge, redis_boolean_response);
 }
 
@@ -3658,35 +3658,35 @@ PHP_METHOD(Redis, pfmerge) {
  * Geo commands
  */
 
-PHP_METHOD(Redis, geoadd) {
+PHP_METHOD(AwesomeRedis, geoadd) {
     REDIS_PROCESS_KW_CMD("GEOADD", redis_key_varval_cmd, redis_long_response);
 }
 
-PHP_METHOD(Redis, geohash) {
+PHP_METHOD(AwesomeRedis, geohash) {
     REDIS_PROCESS_KW_CMD("GEOHASH", redis_key_varval_cmd, redis_mbulk_reply_raw);
 }
 
-PHP_METHOD(Redis, geopos) {
+PHP_METHOD(AwesomeRedis, geopos) {
     REDIS_PROCESS_KW_CMD("GEOPOS", redis_key_varval_cmd, redis_read_variant_reply);
 }
 
-PHP_METHOD(Redis, geodist) {
+PHP_METHOD(AwesomeRedis, geodist) {
     REDIS_PROCESS_CMD(geodist, redis_bulk_double_response);
 }
 
-PHP_METHOD(Redis, georadius) {
+PHP_METHOD(AwesomeRedis, georadius) {
     REDIS_PROCESS_KW_CMD("GEORADIUS", redis_georadius_cmd, redis_read_variant_reply);
 }
 
-PHP_METHOD(Redis, georadius_ro) {
+PHP_METHOD(AwesomeRedis, georadius_ro) {
     REDIS_PROCESS_KW_CMD("GEORADIUS_RO", redis_georadius_cmd, redis_read_variant_reply);
 }
 
-PHP_METHOD(Redis, georadiusbymember) {
+PHP_METHOD(AwesomeRedis, georadiusbymember) {
     REDIS_PROCESS_KW_CMD("GEORADIUSBYMEMBER", redis_georadiusbymember_cmd, redis_read_variant_reply);
 }
 
-PHP_METHOD(Redis, georadiusbymember_ro) {
+PHP_METHOD(AwesomeRedis, georadiusbymember_ro) {
     REDIS_PROCESS_KW_CMD("GEORADIUSBYMEMBER_RO", redis_georadiusbymember_cmd, redis_read_variant_reply);
 }
 
@@ -3694,55 +3694,55 @@ PHP_METHOD(Redis, georadiusbymember_ro) {
  * Streams
  */
 
-PHP_METHOD(Redis, xack) {
+PHP_METHOD(AwesomeRedis, xack) {
     REDIS_PROCESS_CMD(xack, redis_long_response);
 }
 
-PHP_METHOD(Redis, xadd) {
+PHP_METHOD(AwesomeRedis, xadd) {
     REDIS_PROCESS_CMD(xadd, redis_read_variant_reply);
 }
 
-PHP_METHOD(Redis, xclaim) {
+PHP_METHOD(AwesomeRedis, xclaim) {
     REDIS_PROCESS_CMD(xclaim, redis_xclaim_reply);
 }
 
-PHP_METHOD(Redis, xdel) {
+PHP_METHOD(AwesomeRedis, xdel) {
     REDIS_PROCESS_KW_CMD("XDEL", redis_key_str_arr_cmd, redis_long_response);
 }
 
-PHP_METHOD(Redis, xgroup) {
+PHP_METHOD(AwesomeRedis, xgroup) {
     REDIS_PROCESS_CMD(xgroup, redis_read_variant_reply);
 }
 
-PHP_METHOD(Redis, xinfo) {
+PHP_METHOD(AwesomeRedis, xinfo) {
     REDIS_PROCESS_CMD(xinfo, redis_xinfo_reply);
 }
 
-PHP_METHOD(Redis, xlen) {
+PHP_METHOD(AwesomeRedis, xlen) {
     REDIS_PROCESS_KW_CMD("XLEN", redis_key_cmd, redis_long_response);
 }
 
-PHP_METHOD(Redis, xpending) {
+PHP_METHOD(AwesomeRedis, xpending) {
     REDIS_PROCESS_CMD(xpending, redis_read_variant_reply_strings);
 }
 
-PHP_METHOD(Redis, xrange) {
+PHP_METHOD(AwesomeRedis, xrange) {
     REDIS_PROCESS_KW_CMD("XRANGE", redis_xrange_cmd, redis_xrange_reply);
 }
 
-PHP_METHOD(Redis, xread) {
+PHP_METHOD(AwesomeRedis, xread) {
     REDIS_PROCESS_CMD(xread, redis_xread_reply);
 }
 
-PHP_METHOD(Redis, xreadgroup) {
+PHP_METHOD(AwesomeRedis, xreadgroup) {
     REDIS_PROCESS_CMD(xreadgroup, redis_xread_reply);
 }
 
-PHP_METHOD(Redis, xrevrange) {
+PHP_METHOD(AwesomeRedis, xrevrange) {
     REDIS_PROCESS_KW_CMD("XREVRANGE", redis_xrange_cmd, redis_xrange_reply);
 }
 
-PHP_METHOD(Redis, xtrim) {
+PHP_METHOD(AwesomeRedis, xtrim) {
     REDIS_PROCESS_CMD(xtrim, redis_long_response);
 }
 
