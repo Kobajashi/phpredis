@@ -497,7 +497,7 @@ zend_module_entry redis_module_entry = {
      STANDARD_MODULE_HEADER_EX,
      NULL,
      redis_deps,
-     "redis",
+     "awesomeredis",
      NULL,
      PHP_MINIT(redis),
      PHP_MSHUTDOWN(redis),
